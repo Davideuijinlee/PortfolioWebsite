@@ -187,13 +187,35 @@ label {
 	width: 100%;
 }
 
-.skills-container, .devicon-skills{
+.skills-container{
+	height:100px;
+	width:33%;
+	text-align:center;
+}
+
+svg{
+	height:100px;
+	width:100px;
+}
+
+.reduxLogo{
 	height: 100px;
 	width: 100px;
-	display: block;
+	/* margin-top: 5%; */
+}
+
+.phpLogo{
+	height: 95px;
+	width: 100px;
+	/* margin-top: 5%; */
+}
+
+.devicon-skills {
+	height: 100px;
+	width: 100px;
+	/* display: inline-block; */
   margin-left: auto;
 	margin-right: auto;
-	text-align:center;
 }
 .separator {
 	border-top: 1px solid #f2f2f2
@@ -1888,13 +1910,13 @@ width: 100%;}
 }
 
 @media only screen 
-	and (max-device-width: 500px) 
+	and (min-device-width: 700px) 
 { 
 	.skills-container, .devicon-skills{
-		height: 100px;
-		width: 100px;
+		height: 80px;
+		width: 80px;
 		display: block;
-		margin-left: 0;
+		margin-left: auto;
 		margin-right: auto;
 		text-align:center;
 	}
