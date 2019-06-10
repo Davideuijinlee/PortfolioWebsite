@@ -189,14 +189,13 @@ label {
 
 .skills-container{
 	height:100px;
-	width:33%;
+	width: auto;
+	/* display:inline-block; */
+	margin-left: auto;
+	margin-right: auto;
 	text-align:center;
 }
 
-svg{
-	height:100px;
-	width:100px;
-}
 
 .reduxLogo{
 	height: 100px;
@@ -211,10 +210,10 @@ svg{
 }
 
 .devicon-skills {
-	height: 100px;
-	width: 100px;
-	/* display: inline-block; */
-  margin-left: auto;
+	height: 100%;
+	width: 100%;
+	max-width: 100px;
+	margin-left: auto;
 	margin-right: auto;
 }
 .separator {
@@ -1909,15 +1908,7 @@ width: 100%;}
 	color: #565656;
 }
 
-@media only screen 
-	and (min-device-width: 700px) 
-{ 
-	.skills-container, .devicon-skills{
-		height: 80px;
-		width: 80px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		text-align:center;
-	}
-}
+
+
+
+
