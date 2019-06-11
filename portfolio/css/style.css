@@ -197,6 +197,8 @@ label {
 }
 
 
+
+
 .reduxLogo{
 	height: 100px;
 	width: 100px;
@@ -820,7 +822,7 @@ label {
 }
 
 .portfolioImgContainer{
-	height:650px;
+	height:500px;
 }
 .portfolio-thumb::before {
 	background: #111;
@@ -1908,7 +1910,70 @@ width: 100%;}
 	color: #565656;
 }
 
+@media only screen 
+  and (min-device-width: 500px) 
+  and (max-device-width: 1000px)
 
+  {
+	.tempMargin{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.sassPadding{
+		padding-left: 10%;
+	}
+	.gitPadding{
+		padding-left:8%;
+	}
+}
+@media only screen 
+  and (min-device-width: 736px) 
+  and (max-device-width: 736px)
+  
+  {
+	.tempMargin{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.sassPadding{
+		padding-left: 4%;
+	}
+	.gitPadding{
+		padding-left:3%;
+	}
+}
+@media only screen 
+  and (min-device-width: 620px) 
+  and (max-device-width: 740px)
+  
+  {
+	.tempMargin{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.sassPadding{
+		padding-left: 4%;
+	}
+	.gitPadding{
+		padding-left:3%;
+	}
+}
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 568px)
+  
+  {
+	.tempMargin{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.sassPadding{
+		padding-left: 4%;
+	}
+	.gitPadding{
+		padding-left:3%;
+	}
+}
 
 
 
