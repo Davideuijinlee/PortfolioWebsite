@@ -4802,11 +4802,11 @@
 			this.params.attachment = {};
 			this.setting( '' );
 			this.renderContent(); // Not bound to setting change when emptying.
-			$( 'link[rel="icon"][sizes="32x32"]' ).attr( 'href', '/favicon.ico' ); // Set to default.
+			// $( 'link[rel="icon"][sizes="32x32"]' ).attr( 'href', '/favicon.ico' ); // Set to default.
 		}
 	});
 
-	/**
+	/*
 	 * @class    wp.customize.HeaderControl
 	 * @augments wp.customize.Control
 	 */
