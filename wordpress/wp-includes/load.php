@@ -156,12 +156,12 @@ function wp_check_php_mysql_versions() {
  *
  * @since 3.0.0
  */
-function wp_favicon_request() {
-	if ( '/favicon.icon' == $_SERVER['REQUEST_URI'] ) {
-		header( 'Content-Type: image/vnd.microsoft.icon' );
-		exit;
-	}
-}
+// function wp_favicon_request() {
+// 	if ( '/favicon.ico' == $_SERVER['REQUEST_URI'] ) {
+// 		header( 'Content-Type: image/vnd.microsoft.icon' );
+// 		exit;
+// 	}
+// }
 
 /**
  * Die with a maintenance message when conditions are met.
