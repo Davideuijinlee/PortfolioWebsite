@@ -1,6 +1,6 @@
 $(function() {
-
 	// Get the form.
+	$('#contact-submit').off('click');
 	var form = $('#contact-form');
 
 	// Get the messages div.
@@ -9,6 +9,8 @@ $(function() {
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
+		console.log('click off.');
+
 		e.preventDefault();
 
 		// Serialize the form data.
@@ -29,7 +31,12 @@ $(function() {
 			$(formMessages).text(response);
 
 			// Clear the form.
-			$('#contact-form input,#contact-form textarea').val('');
+
+			if (response === 'Message has been sent') {
+				$('#contact-form input,#contact-form textarea').val('');
+			}
+
+			$('#contact-submit').on('click');
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
@@ -42,7 +49,8 @@ $(function() {
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
-		});
+			
+			$('#contact-submit').on('click');
+		})
 	});
-
 });
