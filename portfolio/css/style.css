@@ -70,6 +70,11 @@ a:focus, a:hover, .portfolio-cat a:hover, .footer -menu li a:hover {
 	box-shadow: none;
 }
 
+.youTubeLink{
+	display: block;
+    margin: 0 auto;
+}
+
 a, button {
 	color: #444;
 	outline: medium none;
