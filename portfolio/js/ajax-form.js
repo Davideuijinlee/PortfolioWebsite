@@ -1,4 +1,5 @@
 $(function() {
+	console.log('clicked')
 	// Get the form.
 	$('#contact-submit').off('click');
 	var form = $('#contact-form');
@@ -20,9 +21,13 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
-			data: formData
+			data: formData,
+			beforeSend: function() { 
+				$("#contact-submit").prop('disabled', true); // disable button
+			  },
 		})
 		.done(function(response) {
+			$("#contact-submit").prop('disabled', false);
 			// Make sure that the formMessages div has the 'success' class.
 			$(formMessages).removeClass('error');
 			$(formMessages).addClass('success');
