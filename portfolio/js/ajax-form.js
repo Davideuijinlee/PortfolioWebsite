@@ -1,4 +1,9 @@
 $(function() {
+	$('form').on('submit', 'input, textarea', function() {
+
+		$(this).val((i, value) => value.trim());
+	
+	});
 	// Get the form.
 	$('#contact-submit').off('click');
 	var form = $('#contact-form');
