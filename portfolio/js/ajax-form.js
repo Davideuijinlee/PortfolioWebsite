@@ -1,6 +1,11 @@
 $(function() {
+	$('form').on('submit', 'input, textarea', function() {
 
+		$(this).val((i, value) => value.trim());
+	
+	});
 	// Get the form.
+	$('#contact-submit').off('click');
 	var form = $('#contact-form');
 
 	// Get the messages div.
@@ -9,6 +14,7 @@ $(function() {
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
+
 		e.preventDefault();
 
 		// Serialize the form data.
@@ -18,9 +24,13 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
-			data: formData
+			data: formData,
+			beforeSend: function() { 
+				$("#contact-submit").prop('disabled', true); // disable button
+			  },
 		})
 		.done(function(response) {
+			$("#contact-submit").prop('disabled', false);
 			// Make sure that the formMessages div has the 'success' class.
 			$(formMessages).removeClass('error');
 			$(formMessages).addClass('success');
@@ -29,7 +39,12 @@ $(function() {
 			$(formMessages).text(response);
 
 			// Clear the form.
-			$('#contact-form input,#contact-form textarea').val('');
+
+			if (response === 'Message has been sent') {
+				$('#contact-form input,#contact-form textarea').val('');
+			}
+
+			$('#contact-submit').on('click');
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
@@ -42,7 +57,8 @@ $(function() {
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
-		});
+			
+			$('#contact-submit').on('click');
+		})
 	});
-
 });

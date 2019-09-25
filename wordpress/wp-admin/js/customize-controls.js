@@ -4806,7 +4806,7 @@
 		}
 	});
 
-	/**
+	/*
 	 * @class    wp.customize.HeaderControl
 	 * @augments wp.customize.Control
 	 */

@@ -20,11 +20,11 @@ win.on('load', function () {
 });
 
 // One Page Nav
-var top_offset = $('.header-area').height() - 12;
-$('.main-menu nav ul').onePageNav({
-	currentClass: 'active',
-	scrollOffset: top_offset,
-});
+// var top_offset = $('.header-area').height() - 12;
+// $('.main-menu nav ul').onePageNav({
+// 	currentClass: 'active',
+// 	scrollOffset: top_offset,
+// });
 
 
 // sticky
